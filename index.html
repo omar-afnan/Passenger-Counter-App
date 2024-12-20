@@ -1,34 +1,28 @@
-
-
-let saveEl = document.getElementById("save-el")
-let countEl = document.getElementById("count-el")
-let count = 0 
-
-function increment() {
-    count += 1
-    countEl.textContent = count
-}
-
-function save() {
-    let countStr = count + " - "
-    saveEl.textContent += countStr
-    countEl.textContent = 0
-    count = 0
-}
-
-// Decrement button
-const decrementBtn = document.getElementById("decrement-btn"); 
-// Reset button
-const resetBtn = document.getElementById("reset-btn"); 
-
-// Assign function to decrement button
-decrementBtn.onclick = function () {
-    count--;
-    countEl.textContent = count;
-};
-
-// Assign function to reset button
-resetBtn.onclick = function () {
-    count = 0;
-    countEl.textContent = count;
-};
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passanger Counter app</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="Images/public-transport.png">
+</head>
+<body
+            <div  class="header">
+                <h1 >Passanger Counter App</h1>
+            </div>
+            <hr>
+            <div class="container" id="btn-container" >
+                <h1>People entered:</h1>
+                <h2 id="count-el">0</h2>
+                <button id="increment-btn" onclick="increment()">INCREMENT</button>
+                <button id="decrement-btn">Decrement</button>
+                <button id="reset-btn">Reset</button>
+                <p id="save-el">Previous entries: </p>
+                <button id="save-btn" onclick="save()">SAVE</button>
+                
+            </div>
+            <script src="index.js"></script>
+        
+</body>
+</html>
